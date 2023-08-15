@@ -167,6 +167,9 @@ ul {
 .btn-block {
   width: 100%;
 }
+.btn-active {
+  background-color: var(--primary-300);
+}
 
 /* alerts */
 .alert {
@@ -307,4 +310,12 @@ ul {
     margin: 0;
     border-radius: 0px;
   }
+}
+.categories-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.categories-container .btn {
+  min-width: 80px;
 }
