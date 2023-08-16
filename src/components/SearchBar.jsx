@@ -1,9 +1,22 @@
 import React from 'react';
+import { AiOutlineSearch } from 'react-icons/ai';
 
-const SearchBar = () => {
+const SearchBar = ({ searchInput, setSearchInput, searchProducts }) => {
   return (
-    <form>
-      <input type='search' />
+    <form className='search-form'>
+      <input
+        type='search'
+        placeholder='search'
+        value={searchInput}
+        onChange={(e) => {
+          setSearchInput(e.target.value);
+          searchProducts();
+        }}
+        className='search-input'
+      />
+      <button type='submit' className='btn-icon'>
+        <AiOutlineSearch />
+      </button>
     </form>
   );
 };
